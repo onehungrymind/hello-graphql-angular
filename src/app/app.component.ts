@@ -1,14 +1,56 @@
 import { Component } from '@angular/core';
+import { request } from 'graphql-request';
+
+const BASE_URL = 'https://api.graph.cool/simple/v1/cj864jf2302n30112ip74zkoy';
+
+interface Student {
+    id: string;
+    firstName: string;
+    lastName: string;
+    active: boolean;
+    courses: Course[];
+}
+
+interface Course {
+    id: string;
+    name: string;
+    description: string;
+    level: string;
+}
+
+interface QueryResponse {
+    allStudents
+}
+
+const AllStudentsQuery = `
+  query allStudents {
+    allStudents {
+      id
+      firstName
+      lastName
+      active
+      courses {
+          id
+          name
+          description
+          level
+      }
+    }
+  }
+`;
 
 @Component({
-  selector: 'app-root',
-  template: `
-    <p>
-      app Works!
-    </p>
-  `,
-  styles: []
+    selector: 'app-root',
+    template: `
+        <h1>Students</h1>
+        <pre>{{students | json}}</pre>
+    `,
+    styles: []
 })
 export class AppComponent {
-  title = 'app';
+    students: Student[];
+    constructor() {
+        request(BASE_URL, AllStudentsQuery)
+            .then((data: QueryResponse) => this.students = data.allStudents);
+    }
 }
