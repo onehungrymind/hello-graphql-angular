@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { request } from 'graphql-request';
 
-const BASE_URL = 'https://api.graph.cool/simple/v1/cj864jf2302n30112ip74zkoy';
+// const BASE_URL = 'https://api.graph.cool/simple/v1/cj864jf2302n30112ip74zkoy';
+const BASE_URL = 'http://localhost:3000';
 
 interface Student {
     id: string;
