@@ -1,11 +1,64 @@
 module.exports = {
-  courses: [
-    { id: 1, name: "Functional JavaScript", description: "Because FUN", level: "200" },
-    { id: 2, name: "Intro to HTML", description: "Start somewhere", level: "100" },
-    { id: 3, name: "Intro to Machine Learning", description: "Learn machines", level: "300" }
-  ],
   students: [
-    { id: 123, firstName: "John", lastName: "Doe", active: "true", course_id: 1 },
-    { id: 123, firstName: "Jane", lastName: "Smith", active: "false", course_id: 3 }
+    {
+      id: '1',
+      firstName: 'John',
+      lastName: 'Doe',
+      active: true,
+      courses: [
+        {
+          id: '1',
+          name: 'Machine Learning',
+          description: 'Learn machines',
+          level: '3'
+        },
+        {
+          id: '2',
+          name: 'Intro to HTML',
+          description: 'Start somewhere',
+          level: '1'
+        }
+      ]
+    },
+    {
+      id: '2',
+      firstName: 'Jane',
+      lastName: 'Smith',
+      active: true,
+      courses: [
+        {
+          id: 1,
+          name: 'Machine Learning',
+          description: 'Learn machines',
+          level: '3'
+        },
+        {
+          id: 3,
+          name: 'Functional JavaScript',
+          description: 'Because FUN!',
+          level: '5'
+        }
+      ]
+    }
+  ],
+  courses: [
+    {
+      id: '1',
+      name: 'Machine Learning',
+      description: 'Learn machines',
+      level: '3'
+    },
+    {
+      id: '2',
+      name: 'Intro to HTML',
+      description: 'Start somewhere',
+      level: '1'
+    },
+    {
+      id: '3',
+      name: 'Functional JavaScript',
+      description: 'Because FUN!',
+      level: '5'
+    }
   ]
 };
