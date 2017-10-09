@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "concurrently \"npm run graphql-server\" \"ng serve\"",
+    "graphql-server": "json-graphql-server ./server/graphql/db.js --watch",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -25,6 +26,7 @@
     "graphql": "^0.11.7",
     "graphql-request": "^1.4.0",
     "graphql-tag": "^2.4.2",
+    "json-graphql-server": "^1.0.1",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },
@@ -32,6 +34,7 @@
     "@angular/cli": "1.4.2",
     "@angular/compiler-cli": "^4.2.4",
     "@angular/language-service": "^4.2.4",
+    "concurrently": "^3.5.0",
     "typescript": "~2.3.3"
   }
 }
