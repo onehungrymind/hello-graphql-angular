@@ -18,4 +18,4 @@ $ npm install
 $ npm start
 ```
 
-Then navigate to [http://localhost:4200](http://localhost:4200/#/items) in your browser.
+Then navigate to [http://localhost:4200](http://localhost:4200) in your browser.
