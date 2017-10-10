@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { request } from 'graphql-request';
 
-const REMOTE_URL = 'https://api.graph.cool/simple/v1/cj864jf2302n30112ip74zkoy';
-const LOCAL_URL = 'http://localhost:3000/graphql';
+const BASE_URL = 'http://localhost:3000/graphql';
 
 interface Student {
   id: string;
@@ -51,7 +50,7 @@ const AllStudentsQuery = `
 export class AppComponent {
   students: Student[];
   constructor() {
-    request(LOCAL_URL, AllStudentsQuery).then(
+    request(BASE_URL, AllStudentsQuery).then(
       (data: QueryResponse) => (this.students = data.allStudents)
     );
   }
