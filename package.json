@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "concurrently \"npm run graphql-server\" \"ng serve\"",
-    "graphql-server": "nodemon server.js",
+    "graphql-server": "node server/server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

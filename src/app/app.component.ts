@@ -29,12 +29,6 @@ const AllStudentsQuery = `
       firstName
       lastName
       active
-      courses {
-          id
-          name
-          description
-          level
-      }
     }
   }
 `;
