@@ -8,7 +8,7 @@ Minimal GraphQL example with Angular
 - Node.js v6.9+ and NPM v3.x – we recommend using [NVM (Linux/Mac)](https://github.com/creationix/nvm) or [NVM-Windows (Windows)](https://github.com/coreybutler/nvm-windows)
 - Install Angular CLI via `npm install -g @angular/cli`
 
-### Getting Started
+## Getting Started
 To get started run the commands below.
 
 ```bash
