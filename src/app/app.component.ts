@@ -36,12 +36,13 @@ const AllStudentsQuery = `
 @Component({
   selector: 'app-root',
   template: `
-        <h1>Students</h1>
+        <h1>{{title}}</h1>
         <pre>{{students | json}}</pre>
     `,
   styles: []
 })
 export class AppComponent {
+  title = 'Students';
   students: Student[];
   constructor() {
     request(BASE_URL, AllStudentsQuery).then(
