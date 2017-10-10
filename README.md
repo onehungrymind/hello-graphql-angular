@@ -1,6 +1,6 @@
 ![image](https://user-images.githubusercontent.com/1544557/31393933-ca1ef508-ad91-11e7-877a-f957f6c1792f.png)
 
-# Hello GrahpQL
+# Hello GraphQL
 Minimal GraphQL example with Angular
 
 ## Prerequisites
