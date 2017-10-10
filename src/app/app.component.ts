@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { request } from 'graphql-request';
 
-const BASE_URL = 'http://localhost:3000/graphql';
+const BASE_URL = 'http://localhost:3100/graphql';
 
 interface Student {
   id: string;
